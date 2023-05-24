@@ -16,13 +16,15 @@ export default async function Page() {
   const data: ICocktail[] = await getData();
   return (
     <main className={styles.main}>
-      <h1>MY AWSOME COCKTAIL APP</h1>
-      {data.map((cocktail, i) => (
-        <div key={i} className={styles.description}>
-          {cocktail.name}
-          <p>{cocktail.description}</p>
-        </div>
-      ))}
+      <h1 className={styles.title}>MY AWSOME COCKTAIL APP</h1>
+      <div className={styles.cocktail}>
+        {data.map((cocktail, i) => (
+          <div key={i} className={styles.description}>
+            <span>{cocktail.name}</span>
+            <p>{cocktail.description}</p>
+          </div>
+        ))}
+      </div>
     </main>
   );
 }

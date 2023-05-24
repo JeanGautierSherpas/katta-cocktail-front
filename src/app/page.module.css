@@ -1,10 +1,25 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 260px 1fr;
+}
+
+.title {
+  margin-bottom: 64px;
+}
+
+.cocktail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .description {
@@ -16,6 +31,7 @@
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+  gap: 70px
 }
 
 .description a {
@@ -37,21 +53,6 @@
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  width: var(--max-width);
-  max-width: 100%;
-}
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
 }
 
 .card span {
